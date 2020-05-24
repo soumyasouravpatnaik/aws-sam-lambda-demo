@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A starter AWS Lambda function.
+Resources:
+  helloworldpython3:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      CodeUri: s3://soumyas-sam-demo-bucket/afe0664a7a4dcda7ff56e0584e1c9e2a
+      Description: A starter AWS Lambda function demo for SAM.
+      MemorySize: 128
+      Timeout: 3
